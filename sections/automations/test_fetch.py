@@ -1,6 +1,7 @@
 from selenium.webdriver import Chrome
 from selenium.webdriver.support.select import Select
 import pytest
+import time
 
 @pytest.fixture()
 def enviroment_setup():
@@ -21,6 +22,8 @@ def test_verify_registration(enviroment_setup):
     # work on dropdown
     obj = Select(driver.find_element_by_name('sex'))
     obj.select_by_visible_text('Male')
+
+    time.sleep(20)
 
     # working on radio  button
     driver.find_element_by_xpath("//input[@value='office']").click()
