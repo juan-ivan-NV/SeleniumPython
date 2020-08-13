@@ -1,8 +1,11 @@
 from selenium.webdriver import Chrome
 from Base import InitiateDriver
+from Library import ConfigReader
+from Pages import registrationPage
 
 def test_ValidateRegistration():
     driver = InitiateDriver.startBrowser()
-    driver.find_element_by_name('fld_username').send_keys('Hello')
-    driver.find_element_by_name('fld_email').send_keys('abcd')
-    driver.close()
+    register = registrationPage.RegistrationClass(driver)
+    register.enter_username('hello')
+    register.enter_password('abcd')
+    #register.enter_email('hello')
