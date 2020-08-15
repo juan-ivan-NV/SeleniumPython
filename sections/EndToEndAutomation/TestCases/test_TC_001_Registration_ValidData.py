@@ -3,12 +3,12 @@ from Base import InitiateDriver
 from Library import ConfigReader
 from Pages import registrationPage
 import pytest
+import openpyxl
+from DataGenerate import DataGen
 
-def dataGenerator():
-    li = [['uname1','pass1'],['uname2','pass2'],['uname3','pass3']]
-    return li
 
-@pytest.mark.parametrize('data',dataGenerator())
+
+@pytest.mark.parametrize('data',DataGen.dataGenerator())
 def test_ValidateRegistration(data):
     driver = InitiateDriver.startBrowser()
     register = registrationPage.RegistrationClass(driver)
