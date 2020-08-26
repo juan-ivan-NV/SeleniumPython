@@ -6,8 +6,16 @@ Library  SeleniumLibrary
 
 *** Keywords ***
 Start Browser and Maximize
-    [Arguments]  ${UserURL}  ${InputBrowser}
-    Open Browser  ${UserURL}  ${InputBrowser}
+    Open Browser  https://www.thetestingworld.com/testings/  Chrome
     Maximize Browser Window
+
+Close Browser Window
     ${Title}=  Get Title
-    [Return]  ${Title} 
+    Log  ${Title}
+    Close Browser
+
+Before Each Test Suite
+    Log  Before Each Test Suite
+
+After Each Test Suite
+    Log  After Each Test Suite 
