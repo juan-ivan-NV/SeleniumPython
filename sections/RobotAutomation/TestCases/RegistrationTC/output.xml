@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.7.6 on win32)" generated="20200829 13:12:32.329" rpa="false">
+<robot generator="Robot 3.2.1 (Python 3.7.6 on win32)" generated="20200831 11:48:51.005" rpa="false">
 <suite id="s1" name="TC 004 FetchData" source="C:\Users\Ivan\Desktop\ironhack\selenium\SeleniumPython\sections\RobotAutomation\TestCases\RegistrationTC\TC_004_FetchData.robot">
 <test id="s1-t1" name="Robot Fetch Data">
 <kw name="Start Browser and Maximize" library="Resources1" type="setup">
@@ -9,84 +9,43 @@
 <arg>https://www.thetestingworld.com/testings/</arg>
 <arg>Chrome</arg>
 </arguments>
-<msg timestamp="20200829 13:12:32.647" level="INFO">Opening browser 'Chrome' to base url 'https://www.thetestingworld.com/testings/'.</msg>
-<status status="PASS" starttime="20200829 13:12:32.647" endtime="20200829 13:12:44.242"></status>
+<msg timestamp="20200831 11:48:51.597" level="INFO">Opening browser 'Chrome' to base url 'https://www.thetestingworld.com/testings/'.</msg>
+<status status="PASS" starttime="20200831 11:48:51.597" endtime="20200831 11:48:58.371"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20200829 13:12:44.243" endtime="20200829 13:12:46.366"></status>
+<status status="PASS" starttime="20200831 11:48:58.371" endtime="20200831 11:49:00.496"></status>
 </kw>
-<status status="PASS" starttime="20200829 13:12:32.646" endtime="20200829 13:12:46.367"></status>
+<status status="PASS" starttime="20200831 11:48:51.596" endtime="20200831 11:49:00.497"></status>
 </kw>
-<kw name="Select From List By Index" library="SeleniumLibrary">
-<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<kw name="Create Folder at Runtime" library="Resources1">
+<kw name="Create Folder" library="UserKeywords">
+<status status="PASS" starttime="20200831 11:49:00.500" endtime="20200831 11:49:00.501"></status>
+</kw>
+<kw name="Create Sub Folder" library="UserKeywords">
+<status status="PASS" starttime="20200831 11:49:00.501" endtime="20200831 11:49:00.503"></status>
+</kw>
+<status status="PASS" starttime="20200831 11:49:00.500" endtime="20200831 11:49:00.504"></status>
+</kw>
+<kw name="Start Browser and Maximize" library="Resources1">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
-<arg>name:sex</arg>
-<arg>1</arg>
+<arg>https://www.thetestingworld.com/testings/</arg>
+<arg>Chrome</arg>
 </arguments>
-<msg timestamp="20200829 13:12:46.370" level="INFO">Selecting options from selection list 'name:sex' by index 1.</msg>
-<status status="PASS" starttime="20200829 13:12:46.369" endtime="20200829 13:12:46.499"></status>
+<msg timestamp="20200831 11:49:00.510" level="INFO">Opening browser 'Chrome' to base url 'https://www.thetestingworld.com/testings/'.</msg>
+<status status="PASS" starttime="20200831 11:49:00.507" endtime="20200831 11:49:05.686"></status>
 </kw>
-<kw name="Get Selected List Value" library="SeleniumLibrary">
-<doc>Returns the value of selected option from selection list ``locator``.</doc>
-<arguments>
-<arg>name:sex</arg>
-</arguments>
-<assign>
-<var>${Val}</var>
-</assign>
-<msg timestamp="20200829 13:12:46.547" level="INFO">${Val} = 1</msg>
-<status status="PASS" starttime="20200829 13:12:46.499" endtime="20200829 13:12:46.547"></status>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200831 11:49:05.686" endtime="20200831 11:49:08.186"></status>
 </kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${Val}</arg>
-</arguments>
-<msg timestamp="20200829 13:12:46.548" level="INFO">1</msg>
-<status status="PASS" starttime="20200829 13:12:46.548" endtime="20200829 13:12:46.548"></status>
+<status status="PASS" starttime="20200831 11:49:00.505" endtime="20200831 11:49:08.187"></status>
 </kw>
-<kw name="Get Selected List Label" library="SeleniumLibrary">
-<doc>Returns the label of selected option from selection list ``locator``.</doc>
-<arguments>
-<arg>name:sex</arg>
-</arguments>
-<assign>
-<var>${Text}</var>
-</assign>
-<msg timestamp="20200829 13:12:46.593" level="INFO">${Text} = Male</msg>
-<status status="PASS" starttime="20200829 13:12:46.548" endtime="20200829 13:12:46.593"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${Text}</arg>
-</arguments>
-<msg timestamp="20200829 13:12:46.594" level="INFO">Male</msg>
-<status status="PASS" starttime="20200829 13:12:46.594" endtime="20200829 13:12:46.594"></status>
-</kw>
-<kw name="Get List Items" library="SeleniumLibrary">
-<doc>Returns all labels or values of selection list ``locator``.</doc>
-<arguments>
-<arg>name:sex</arg>
-</arguments>
-<assign>
-<var>${AllLabels}</var>
-</assign>
-<msg timestamp="20200829 13:12:46.655" level="INFO">${AllLabels} = ['Choose Gender', 'Male', 'Female']</msg>
-<status status="PASS" starttime="20200829 13:12:46.594" endtime="20200829 13:12:46.655"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${AllLabels}</arg>
-</arguments>
-<msg timestamp="20200829 13:12:46.656" level="INFO">['Choose Gender', 'Male', 'Female']</msg>
-<status status="PASS" starttime="20200829 13:12:46.656" endtime="20200829 13:12:46.656"></status>
-</kw>
-<status status="PASS" starttime="20200829 13:12:32.646" endtime="20200829 13:12:46.656" critical="yes"></status>
+<status status="PASS" starttime="20200831 11:48:51.595" endtime="20200831 11:49:08.188" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20200829 13:12:32.333" endtime="20200829 13:12:46.661"></status>
+<status status="PASS" starttime="20200831 11:48:51.008" endtime="20200831 11:49:08.194"></status>
 </suite>
 <statistics>
 <total>

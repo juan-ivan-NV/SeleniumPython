@@ -1,5 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
+Library  ../ExternalKeywords/UserKeywords.py
 
 *** Variables ***
 
@@ -19,3 +20,14 @@ Before Each Test Suite
 
 After Each Test Suite
     Log  After Each Test Suite 
+
+Create Folder at Runtime
+    [Arguments]  ${foldername}  ${subfoldername}
+    create_folder  ${foldername}
+    create_sub_folder  ${subfoldername}
+    Log  "Task Done Successfully"
+
+Concatenate Username and Password
+    [Arguments]  ${username}  ${password}
+    ${resultval}=  concatenate_two_values  ${username}  ${password}  
+    Log  ${resultval}

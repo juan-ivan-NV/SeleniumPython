@@ -1,10 +1,5 @@
 *** Settings ***
-Library  SeleniumLibrary
-Resource  ../../Resources/Resources1.robot
-Documentation  This file contains testcase of testing ABC Functionality 
-Test Setup  Start Browser and Maximize
-Test Teardown  Close Browser Window
-Suite Setup  Before Each Test Suite
+Library  ../../ExternalKeywords/Locators.py
 
 
 
@@ -20,3 +15,9 @@ Robot First Test Case
 
 Robot Next Test Case
     Select Radio Button  add_type  office
+
+*** Keywords ***
+Read Element Locator
+    [Arguments]  JsonPath
+    ${result}=  read_locator_from_json  JsonPath
+    [return]  ${result}
